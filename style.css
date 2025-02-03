@@ -1,0 +1,614 @@
+/*FONTs*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:  #ffffff;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #393939;
+}
+
+header{
+    font-family: "Raleway";
+    height: 15vh;
+    width: 100vw;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);;
+    background-color: #c5ad85;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navmenu{
+    display: flex;
+}
+
+.navmenu > ul{
+    display: flex;
+    gap:20px;
+    font-size: 18px;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.navmenu a.active {
+    color: #b4731a;
+    font-weight: bold;
+    position: relative;
+}
+
+.navmenu a.active::after{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0; 
+    width: 50%;
+    height: 3px;
+    background: #b4731a;
+    bottom: -3;
+    margin: auto;
+}
+
+.navmenu a:hover {
+    color: #b4731a;
+}
+
+.hero{
+    position: relative;
+    height: calc(100vh - 15vh);
+    width: 100vw;
+    background-image: url('/assets/homepic.jpg');
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-size: 1.5em;
+
+    transform: scale(1);
+    opacity: 1;
+    animation: zoomOut 0.5s ease-out 0.1s backwards;
+}
+
+@keyframes zoomOut {
+    0% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+#text-line{
+    font-family: "Roboto";
+}
+
+#about-btn{
+    font-family: "Roboto";
+    padding: 15px 40px 15px 40px;
+    border-radius: 30px;
+    border: 1px solid #34b7a7;
+    background-color: #34b7a7;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#about-btn:hover{
+    background-color: #207e73;
+    transform: scale(1.1);
+}
+
+.logos > ul
+{
+    display: flex;
+    font-size: 30px;
+    gap:20px;
+    list-style-type: none;
+}
+
+main 
+{
+    background-color: #fffbf4;
+}
+
+/*-------------------------------ABOUT PAGE-----------------------------------*/
+
+.about-section
+{
+    height: 100%;
+    width: 100vw;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.5s ease-out 0.1s forwards;
+}
+
+@keyframes fadeUp 
+{
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.about-header
+{
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.about-header h2
+{
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.about-header h2:after 
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00a0d5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.about-header p
+{
+    font-size: 18px;
+}
+
+.container
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+    
+}
+
+.about-content > p
+{
+    width: 750px;
+    margin: 20px 0px 30px 0px;
+    font-size: 18px;
+}
+
+.about-content > h2
+{
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.about-img-container > img
+{
+    height: 400px;
+    width: 350px;
+}
+
+.about-column-container
+{
+    display: flex;
+    flex-direction: row ;
+    justify-content: left;
+    align-items: center;
+}
+
+.resume-dl-container
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.about-column
+{
+    font-family: "roboto";
+    color: #393939;
+}
+.about-column > ul
+{
+    list-style: none;
+    padding: 0;
+}
+
+.about-column > ul > li 
+{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.about-column > ul > li > strong
+{
+    margin-right: 10px;
+}
+
+.about-column > ul > li > a
+{
+    text-decoration: underline;
+}
+
+.colored-symbol 
+{
+    font-size: 26px;
+    color: #1997b1;
+    margin-right: 10px; 
+}
+
+#resume-dl{
+    font-family: "Roboto";
+    padding: 15px 40px 15px 40px;
+    border-radius: 30px;
+    border: 1px solid #34b7a7;
+    background-color: #34b7a7;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#resume-dl:hover{
+    background-color: #207e73;
+    transform: scale(1.1);
+}
+
+.project-section
+{
+    padding-bottom: 100px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.5s ease-out 0.1s forwards;
+}
+
+.project-header
+{
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.project-header h2
+{
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.project-header h2:after 
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00a0d5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.project-container
+{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project
+{
+    display: flex;
+    flex-direction: column;
+    font-family: "Raleway";
+    height: 575px;
+    width: 500px;
+    background-color: #b6a07b;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.project > h2 
+{
+    text-decoration: underline;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project > h4
+{
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.project > ul
+{
+    padding: 10px 30px 10px 30px;
+}
+
+.project > ul > li > ol
+{
+    padding: 10px 10px 10px 10px;
+}
+.proj-btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+#project-btn{
+    font-family: "Roboto";
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #34b7a7;
+    background-color: #34b7a7;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: medium;
+    margin: 10px 0px 30px 0px;
+}
+
+#project-btn-grayed{
+    font-family: "Roboto";
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #788b89;
+    background-color: #788b89;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: medium;
+    margin: 10px 0px 30px 0px;
+}
+
+#project-btn:hover{
+    border: 1px solid #207e73;
+    background-color: #207e73;
+    transform: scale(1.1);
+}
+
+/*-----------------------RESUME SECTION-------------------*/
+
+.resume-section
+{
+    height: 100%;
+    width: 100vw;
+    font-family: "Raleway";
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.5s ease-out 0.1s forwards;
+}
+
+.resume-header
+{
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.resume-header h2
+{
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.resume-header h2:after 
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00a0d5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.resume-header p
+{
+    font-size: 18px;
+}
+
+.resume-container{
+    padding: 0px 50px 80px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.resume-item{
+    position: relative;
+    margin-left: 20px;
+    padding-left: 30px;
+    border-left: 3px solid #31c7f9;
+}
+
+.resume-item{
+    position: relative;
+    
+}
+
+.resume-item::before{
+    content: '';
+    position: absolute;
+    left: -9.5px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 3px solid #31c7f9;
+}
+
+.resume-title
+{
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.resume-item h4
+{
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.resume-item h5 {
+    font-size: 16px;
+    padding: 0px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume-item ul {
+    padding-left: 20px;
+}
+
+.resume-item ul li {
+    padding-bottom: 10px;
+}
+.resume-item p {
+    padding-bottom: 10px;
+}
+
+/*-----------------------------------SKILLS SECTION------------------------*/
+.skills-section
+{
+    height: 100%;
+    width: 100vw;
+    font-family: "Raleway";
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.5s ease-out 0.1s forwards;
+}
+
+.skills-header
+{
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.skills-header h2
+{
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.skills-header h2:after 
+{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #00a0d5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.icon{
+    padding: 30px;
+}
+.icon i {
+    font-size: 70px;   
+}
+
+.icon img{
+    height:70px;
+}
+  

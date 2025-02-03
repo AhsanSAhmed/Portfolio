@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ahsan</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="sitename"><a href="index.html">AHSAN</a></h1>
+
+        <div class="navmenu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active">ABOUT</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+            </ul>
+        </div>
+
+        <div class="logos">
+            <ul>
+                <li><a href="https://github.com/AhsanSAhmed" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:ahsanahmedshajee@example.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ahsan-shajee-ahmed-79b168256/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="about-section">
+            <div class="about-header">
+                <h2>About</h2>
+                <p><i>"The best way to predict the future is to invent it." – Alan Kay</p>
+            </div>
+
+            <div class="container">
+                <div class="about-img-container">
+                    <img src="assets/Picture.jpeg" alt="picture">
+                </div>
+
+                <div class="about-content">
+                    <h2>Hi, I'm Ahsan Shajee Ahmed</h2>
+                    <p><i>I'm a Computer Science graduate with a strong interest in Backend Development,
+                        AI/ML and  Cloud technologies. Currently, I am in my 4th year at Kalinga Institute of Industrial Technology, pursuing a 
+                        B.Tech in Computer Science and Engineering. 
+                        I’m always exploring new advancements in these fields to create innovative solutions for real-world challenges.</i></p>
+
+                    <div class="about-column-container">
+                        <div class="about-column" id="abt-col-1">
+                            <ul>
+                                <li><span class="colored-symbol">&#8250;</span><strong>Email: </strong>ahsanahmedshajee@gmail.com</li>
+                                <li><span class="colored-symbol">&#8250;</span><strong>Contact-No: </strong>Available upon Request</li>
+                                <li><span class="colored-symbol">&#8250;</span><strong>Degree: </strong>B.Tech (Computer Science and Engineering)</li>
+                            </ul>
+                        </div>
+                        <div class="about-column" id="abt-col-2">
+                            <ul>
+                                <li><span class="colored-symbol">&#8250;</span><strong>GitHub:</strong><a href="https://github.com/AhsanSAhmed" target="_blank">github.com/AhsanSAhmed</a></a></li>
+                                <li><span class="colored-symbol">&#8250;</span>
+                                    <strong>LinkedIn:</strong>
+                                    <a href="https://www.linkedin.com/in/ahsan-shajee-ahmed-79b168256/" target="_blank">Ahsan Shajee Ahmed</a>
+                                </li>
+                                <li><span class="colored-symbol">&#8250;</span><strong>Status:</strong> Open to Work</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>
+                        I’m constantly staying updated with the latest trends in technology 
+                        and look forward to connecting with others who share a passion
+                        for using technology to solve meaningful problems.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-dl-container">
+            <a href="assets/pdf/Resume-CV.pdf" download="Ahsan_Resume.pdf">
+                <button id="resume-dl">
+                    Download my Resume.
+                </button>
+            </a>
+        </div>
+        <div class="project-section">
+            <div class="project-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="project-container">
+                <div class="project">
+                    <h2>Stokify</h2>
+                    <h4>A comprehensive stock analysis and prediction platform</h6>
+                    <ul>
+                        <li><strong>Features:</strong>
+                            <ol>
+                                <li>Dynamic navigation menu and homepage displaying the top 25 traded stocks.</li>
+                                <li>Stock detail pages with key stats, high-low plots, and EMA (Exponential Moving Average) plots for informed decision-making.</li>
+                                <li>LSTM model integration to predict stock movement based on historical data.</li>
+                                <li>Interactive stock quiz to educate users about stock movement essentials, including EMA relationships and predictions.</li>
+                                <li>Final quiz question allows users to compare their stock movement prediction with the LSTM model's prediction.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Technologies Used: </strong>
+                            <ol>
+                                <li>Backend: Python</li>
+                                <li>Frontend: React and JavaScript</li>
+                                <li>Database: MongoDB Atlas</li>
+                                <li>API Hosting: Render</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="proj-btn-container">
+                        <button id="project-btn-grayed">
+                            To Repository
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h2>Loan Management App - Backend</h2>
+                    <h4>A backend service for loan management, similar to Slice and KreditBee</h6>
+                    <ul>
+                        <li><strong>Features:</strong>
+                            <ol>
+                                <li>Built an approval system that validates applications based on age and salary criteria.</li>
+                                <li>Designed secure authentication APIs with JWT tokens for user access control.</li>
+                                <li>Implemented APIs to manage user data and borrowing processes.</li>
+                                <li>Handles updating purchase power and calculating repayment details.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Technologies Used: </strong> 
+                            <ol>
+                                <li>Backend: Node.js, Express</li>
+                                <li>Database: MongoDB</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="proj-btn-container">
+                        <button id="project-btn" onclick="window.open('https://github.com/AhsanSAhmed/Money-Lending-App-Backend')">
+                            To Repository
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h2>Cancer-MLModels</h2>
+                    <h4>Machine Learning models for breast cancer diagnosis</h4>
+                    <ul>
+                        <li><strong>Features:</strong>
+                            <ol>
+                                <li>Built an ML model to predict tumor malignancy with improved accuracy.</li>
+                                <li>Evaluated models using accuracy, precision, recall, and AUC-ROC scores.</li>
+                                <li>Applied ensemble learning techniques (Voting and Stacking Classifiers) for performance enhancement.</li>
+                                <li>Identified the best-performing algorithm for diagnosis using performance metrics.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Technologies Used: </strong>
+                            <ol>
+                                <li>Python, NumPy, Pandas, Matplotlib, Seaborn</li>
+                                <li>Machine Learning: Scikit-learn, XGBoost</li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="proj-btn-container">
+                        <button id="project-btn" onclick="window.open('https://github.com/AhsanSAhmed/BreastCancer_MLModels')">
+                            To Repository
+                        </button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </main>
+</body>
+</html>
